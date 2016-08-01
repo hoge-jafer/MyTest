@@ -1,0 +1,45 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="PictureFont.DataPage.Red"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PictureFont.DataPage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:PictureFont.Model"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView x:ConnectionId='2' Name="MainCategory"
+                          HorizontalAlignment="Stretch"
+                                                         
+                          IsItemClickEnabled="True"
+                                                            >
+            <GridView.ItemTemplate>
+                <DataTemplate                           >
+                    <StackPanel x:ConnectionId='3'>
+                        <Image x:ConnectionId='4' Name="CategoryImage" 
+                                        Height="150" Width="200"/>
+                        <TextBlock x:ConnectionId='5' FontSize="16"                             />
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True"          
+                Background="Transparent">
+            <TextBlock FontFamily="Segoe MDL2 Assets"
+                       Text="&#xE930;"
+                       FontSize="35"
+                       HorizontalAlignment="Center"
+                       />
+            <!--<StackPanel Orientation="Horizontal">
+                <AppBarButton x:Name="Show" Icon="Accept"  
+                              Label="确认"
+                              HorizontalAlignment="Center"
+                              />
+            </StackPanel>-->
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
+
